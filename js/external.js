@@ -2,10 +2,14 @@
 // numbers are prompts
 // use an alert to show the results
 
-var movie1 = prompt("How many days did you rent your first movie?");
-var movie2 = prompt("How many days did you rent movie number 2?");
-var movie3 = prompt("How many days did you rent your third movie?");
+var work1 = 400;
+var work2 = 380;
+var work3 = 350;
 
-var totalPrice = movie1 * 3 + movie2 * 3 + movie3 * 3;
+var input1 = prompt("How many hours did you work with Google?");
+var input2 = prompt("How many hours did you work with Amazon?");
+var input3 = prompt("How many hours did you work with Facebook?");
 
-alert("The total amount for all your movies is going to be: $" + totalPrice);
+var totalPay = work1 * input1 + work2 * input2 + work3 * input3;
+
+alert("Based on the pay rate of each employer, you have earned: $" + totalPay + " so far this week.");
