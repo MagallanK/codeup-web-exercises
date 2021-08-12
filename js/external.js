@@ -1,8 +1,11 @@
 "use strict";
+// numbers are prompts
+// use an alert to show the results
 
-console.log("Hello from external JavaScript.");
+var movie1 = prompt("How many days did you rent your first movie?");
+var movie2 = prompt("How many days did you rent movie number 2?");
+var movie3 = prompt("How many days did you rent your third movie?");
 
-alert('Welcome to my Website!');
+var totalPrice = movie1 * 3 + movie2 * 3 + movie3 * 3;
 
-var userColor = prompt('What is your favorite color?');
-alert('Awesome, ' + userColor + ' is my favorite color too!');
+alert("The total amount for all your movies is going to be: $" + totalPrice);
