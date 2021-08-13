@@ -1,7 +1,11 @@
 "use strict";
 
- var classSize = confirm("Is the class you are trying to join full?");
+var validOffer = confirm("Is the offer still valid?");
 
- var classSchedule = confirm("Do you have a class at 1700 already?");
+var twoOrMoreItems = parseInt(prompt("How many items do you have in your cart?")) >= 2;
 
- alert("You can join the class is a " + (!classSize && !classSchedule) + " statement.");
+var premiumMember = confirm("Are you a premium member?");
+
+var canUserUseOffer = (twoOrMoreItems || premiumMember) && validOffer;
+
+alert("You can use this offer is a " + canUserUseOffer + " statement.");
