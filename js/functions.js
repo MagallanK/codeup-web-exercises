@@ -10,9 +10,10 @@
  */
 
     function sayHello(name) {
-        return "Hello " + name + "!";
+        return "Hello " + name;
 }
-
+var name = "Mag!";
+console.log(sayHello(name));
 
 
 /**
@@ -23,7 +24,7 @@
  * console.log 'helloMessage' to check your work
  */
 
-    var helloMessage = sayHello("Mag");
+    var helloMessage = sayHello("Magallan");
         console.log(helloMessage);
 
 
@@ -36,11 +37,9 @@
  * console.
  */
 
-    var myName = "Mag"
+    var myName = "Magallan, Kapena";
     sayHello(myName);
-
-
-
+    console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -89,13 +88,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
     function calculateTip(tipPercent, totalBill){
-        var tipPercent = .2;
-        var totalBill = 100;
         return tipPercent * totalBill;
 
 }
 
-
+console.log(calculateTip(.2, 20));
+console.log(calculateTip(.25, 25.50));
+console.log(calculateTip(.15, 33.42));
 
 
 /**
@@ -128,12 +127,12 @@ var random = Math.floor((Math.random() * 3) + 1);
 
 
     function applyDiscount(originalPrice, discountedPercent){
-        var originalPrice = 200;
-        var discountedPercent = .2;
-        return originalPrice * discountedPercent;
+        return originalPrice - (originalPrice * discountedPercent);
 }
 
-
+console.log(applyDiscount(200, .2));
+console.log(applyDiscount(45.99, .12));
+console.log(applyDiscount(100, .2));
 
 
 
