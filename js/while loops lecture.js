@@ -82,7 +82,15 @@
 //     var secret = prompt("What is the secret password?")
 // } while(secret !== "sesame");
 
-
-
-
+// function allOddNumbersToX (x) {
+//     for (var i = 0; i <= x; i++){
+//         if (i % 2 === 0) {
+//             continue;
+//         }
+//         console.log(i);
+//     }
+// }
+//
+// allOddNumbersToX(17);
+// // allOddNumbersToX(18);
 
