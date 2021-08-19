@@ -36,11 +36,7 @@
 
 //EX: 4
 // for (var i = 1; i < 10; i++) {
-//     var output = '';
-//     for (var j = 0; j < 1 ; j++) {
-//         output = output + i.toString();
-//     }
-//     console.log(output);
+//     console.log(i);
 // }
 
 //EX: 5

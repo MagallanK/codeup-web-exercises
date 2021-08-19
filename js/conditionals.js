@@ -24,16 +24,15 @@
 //     var userColor = prompt("What color do you want to know about?");
 //     userColor = userColor.toLowerCase();
 //     if (userColor === "blue"){
-//         alert("Blue is the color of the sky.");
+//         console.log("Blue is the color of the sky.");
 //     } else if (userColor === "red"){
-//         alert("Strawberries are red.");
+//         console.log("Strawberries are red.");
 //     } else if (userColor === "cyan"){
-//         alert("I don't know anything about cyan.");
+//         console.log("I don't know anything about cyan.");
 //     } else {
-//         alert("I don't know anything about this color either at the moment.");
+//         console.log("I don't know anything about this color either at the moment.");
 //     }
 // }
-//
 // console.log(analyzeColor());
 
 
@@ -147,6 +146,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+
 // var luckyNum = Math.floor(Math.random() * 6);
 // var totalAmount = 100;
 //
@@ -183,6 +184,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
+
+
 
 // var luckyNumber = Math.floor(Math.random() * 6);
 // var totalAmount = prompt("What was the total of your bill?");
@@ -229,19 +232,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * HINT: The way we prompt for a value could be improved
  */
 
-var userChoice = confirm("Would you like to enter a number?");
-   var userNum =prompt("What number would you like to enter?");
-       if (userNum % 2 == 0) {
-           alert("The number is even.");
-       } else if (userNum % 1 == 0) {
-           alert("The number is odd.");
-       } else {
-           alert("The input you had, was not a number. Please enter a whole number/ integer to move on.");
-   }
-    var sum = (userNum + 100);
-        alert("Your chosen number plus 100 is: " + (sum));
-
-    alert("The number you entered is a " + Math.sign(userNum) + " number");
-
+// var userChoice = confirm("Would you like to enter a number?");
+//     if(userChoice === true) {
+//
+//         var userNum = prompt("What number would you like to enter?");
+//
+//         if (userNum % 2 == 0) {
+//             alert("The number is even.");
+//         } else if (userNum % 1 == 0) {
+//             alert("The number is odd.");
+//         } else {
+//             alert("The input you had, was not a number. Please enter a whole number/ integer to move on.");
+//         }
+//         userNum = parseInt(userNum);
+//         var sum = userNum + 100;
+//         alert("Your chosen number " + userNum + " plus 100 is: " + sum);
+//         alert("The number you entered is a " + Math.sign(userNum) + " number");
+//     }
 
 
