@@ -14,7 +14,12 @@
 
 //EX: 2
 // function random(max, min) {
-//     var randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+//     for (var i = 0; i < 10; i++) {
+//
+//         var randomNum = Math.floor(Math.random() * 180) + 20;
+//         var numberValue = randomNum % 2 == 0 ? "even" : "odd";
+//         console.log(randomNum + " is " + numberValue);
+//     }
 // }
 
 
@@ -36,8 +41,17 @@
 
 //EX: 4
 // for (var i = 1; i < 10; i++) {
-//     console.log(i);
+//     var output = "";
+//
+//     for ( var j = 0; j < i; j++) {
+//         output += i;
+//     }
+//     console.log(output);
 // }
+//     for (let i = 1; i < 10; i++) {
+//         console.log(i.tostring().repeat());
+//     }
+
 
 //EX: 5
 // for (var i = 0; i <= 100; i += 5){
