@@ -148,32 +148,32 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
-// var luckyNum = Math.floor(Math.random() * 6);
-// var totalAmount = 100;
-//
-// function calculateTotal(){
-//     if (luckyNum === 5){
-//         console.log("Out of $" + totalAmount + " You get everything for free! Your new total is: $" + (totalAmount - (totalAmount * 0)));
-//     }
-//     else if(luckyNum === 4){
-//         console.log("Out of $" + totalAmount + " You get a 50% discount! Your new total is: $" + (totalAmount - (totalAmount * .5)));
-//     }
-//     else if(luckyNum === 3){
-//         console.log("Out of $" + totalAmount + " You get a 35% discount! Your new total is: $" + (totalAmount - (totalAmount * .35)));
-//     }
-//     else if(luckyNum === 2){
-//         console.log("Out of $" + totalAmount + " You get a 25% discount! Your new total is: $" + (totalAmount - (totalAmount * .25)));
-//     }
-//     else if(luckyNum === 1){
-//         console.log("Out of $" + totalAmount + " You get a 10% discount! Your new total is: $" + (totalAmount - (totalAmount * .1)));
-//     }
-//     else{
-//         console.log("Out of $" + totalAmount + " You get no discount at this time. Your total remains the same.");
-//     }
-//
-// }
-//
-// console.log(calculateTotal());
+var luckyNum = Math.floor(Math.random() * 6);
+var totalAmount = 100;
+
+function calculateTotal(){
+    if (luckyNum === 5){
+        console.log("Out of $" + totalAmount + " You get everything for free! Your new total is: $" + (totalAmount - (totalAmount * 0)));
+    }
+    else if(luckyNum === 4){
+        console.log("Out of $" + totalAmount + " You get a 50% discount! Your new total is: $" + (totalAmount - (totalAmount * .5)));
+    }
+    else if(luckyNum === 3){
+        console.log("Out of $" + totalAmount + " You get a 35% discount! Your new total is: $" + (totalAmount - (totalAmount * .35)));
+    }
+    else if(luckyNum === 2){
+        console.log("Out of $" + totalAmount + " You get a 25% discount! Your new total is: $" + (totalAmount - (totalAmount * .25)));
+    }
+    else if(luckyNum === 1){
+        console.log("Out of $" + totalAmount + " You get a 10% discount! Your new total is: $" + (totalAmount - (totalAmount * .1)));
+    }
+    else{
+        console.log("Out of $" + totalAmount + " You get no discount at this time. Your total remains the same.");
+    }
+
+}
+
+console.log(calculateTotal());
 
 
 /**
