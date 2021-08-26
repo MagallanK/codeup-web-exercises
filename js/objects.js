@@ -61,7 +61,7 @@
     shoppers.forEach(function(shopper) {
         if (shopper.amount >= 200) {
             var discount = shopper.amount * .12;
-            console.log(shopper.name + "'s discount was $" + discount + " The new total is $" + (shopper.amount - discount));
+            console.log(shopper.name + "'s discount is 12%. The total discount is $" + discount + " The new total is $" + (shopper.amount - discount));
         }
         else {
             console.log(shopper.name + " did not have a discount at this time so " + shopper.name + "'s total is $" + shopper.amount);
@@ -83,25 +83,49 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    var books = [book1, book2, book3, book4, book5]
-    var book1 = {
-        title: "The Cat in the hat",
-        authorFirstName: "Dr.",
-        authorLastName: "Suess"
-    }
-    var book2 = {
-        title: "book 2"
-    }
-    var book3 = {
-        title: "book3"
+
+    var book1 ={
+        title: "The Salmon of Doubt",
+        author: {
+        firstName: "Douglas",
+        lastName: "Adams"},
+       // eachBook: bookInfo
+    };
+    var book2 ={
+        title: "First and Only",
+        author: {
+        firstName: "Dan",
+        lastName: "Abnett"},
+       // eachBook: bookInfo
+    };
+    var book3 ={
+        title: "Think Big",
+        author: {
+        firstName: "Dr. Robert",
+        lastName: "Anthony"},
+        //eachBook: bookInfo
     }
     var book4 ={
-        title: "book4"
+        title: "On Tyranny",
+        author: {
+        firstName: "Timothy",
+        lastName: "Snyder"},
+        //eachBook: bookInfo
     }
-    var book5 = {
-        title: "book5"
+    var book5 ={
+        title: "A Military Miscellany",
+        author: {
+        firstName: "Thomas",
+        lastName: "Ayres"},
+        //eachBook: bookInfo
     }
+
+    var books = [book1, book2, book3, book4, book5];
+
     console.log(books);
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
 
 
 
@@ -131,6 +155,31 @@
      *      ...
      */
 
+    // var bookInfo = function() {
+    //
+    //     console.log("Book # " + books + "Title:  " + this.title + " Author: " + this.firstName + " " + this.lastName);
+    // }
+    //
+    // books.eachBook = bookInfo;
+    // console.log(books.eachBook());
+    //
+    // var myBooks = [book1, book2, book3, book4, book5];
+    // console.log(myBooks);
+    // myBooks.forEach(function(book) {
+    //     book.eachBook();
+    // });
+
+    //Shanshan's review
+    books.forEach(function(book, index) {
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log(" ")
+    });
+
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -141,5 +190,38 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    //Shanshan's review
+
+    function createBook(title, name) {
+        // get name array
+        var nameArr = name.split(" ");
+        var firstName = nameArr[0];
+        var lastName = nameArr[1];
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+    var books = [
+        createBook('A Promised Land', 'Barack Obama'),
+        createBook('The Midnight Library', 'Matt Haig')
+    ];
+
+    function showBookInfo(book) {
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log(" ");
+    }
+
+    books.forEach(function(book, index) {
+        console.log("Book: # " + (index +1));
+        showBookInfo(book);
+    });
+
 
 })();
