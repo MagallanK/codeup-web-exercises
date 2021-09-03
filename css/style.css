@@ -1,4 +1,80 @@
 .fancy-header {
-    color: purple;
+    color: green;
+    text-decoration: underline;
+    text-align: center;
+}
+
+h2{
+    color: blue;
     text-decoration: underline;
 }
+
+body{
+    background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: cornflowerblue;
+    font-family: Geneva;
+    font-size: 16px;
+}
+
+ol{
+    list-style: upper-alpha;
+}
+
+ul{
+    list-style: square;
+}
+
+table{
+    padding: 24px;
+}
+
+tr{
+    padding: 14px
+    font-size: 22px;
+
+}
+
+td{
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+a:link{
+    color: blue;
+}
+
+a:visited{
+    color: red;
+}
+
+a:hover{
+    color: green;
+}
+
+a:active{
+    color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+/*Open up your welcome.html file from earlier. COMPLETED */
+/*Center the main heading COMPLETED */
+/*Add a style to change the color of the headers on your page and make them underlined. COMPLETED */
+/*Add a style to change the background color of the page. COMPLETED*/
+/*Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image. COMPLETED*/
+/*Add a style to change the list-style to something other than the default bullet. COMPLETED */
+/*Add a style to change the font for the entire page. Use google fonts if you would like. COMPLETED*/
+/*Add a style to change the table, table cells td and rows tr padding and font sizes. COMPLETED*/
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active). COMPLETED*/
+/*                                                                                                     Continue experimenting with styles to increase the visual appeal of the page.*/
