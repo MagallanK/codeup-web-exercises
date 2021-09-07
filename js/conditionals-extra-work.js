@@ -23,9 +23,45 @@
  */
 
 function generation(x, y){
-    
-
-
+    if(x === 1 && y === "m"){
+       return "son"
+    }
+    if(x === 2 && y === "m"){
+        return "grandson"
+    }
+    if(x === 3 && y === "m"){
+        return "great grandson"
+    }
+    if(x === 0){
+        return "me!"
+    }
+    if(x === -1 && y === "m"){
+        return "father"
+    }
+    if(x === -2 && y === "m"){
+        return "grandfather"
+    }
+    if(x === -3 && y === "m"){
+        return "great grandfather"
+    }
+    if(x=== 1 && y === "f"){
+        return "daughter"
+    }
+    if(x === 2 && y === "f"){
+        return "granddaughter"
+    }
+    if(x === 3 && y === "f"){
+        return "great granddaughter"
+    }
+    if(x === -1 && y === "f"){
+        return "mother"
+    }
+    if(x === -2 && y === "f"){
+        return "grandmother"
+    }
+    if(x === -3 && y === "f"){
+       return "great grandmother"
+    }
 }
 
 
@@ -40,6 +76,16 @@ function generation(x, y){
  * Notes
  * The name you return must be capitalized.
  */
+
+
+function sayHelloBye(name, num){
+    name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    if(num === 1){
+        return "Hello " + name;
+    }else{
+        return "Bye " + name;
+    }
+}
 
 
 /* Tile Teamwork Tactics
@@ -58,6 +104,16 @@ function generation(x, y){
  * Expect only positive integer inputs.
  */
 
+function possibleBonus(you, friend){
+    if(friend - you >= 1 && friend - you <= 6){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
 
 /* Integer in Range?
  * Create a function named intWithinBounds that validates whether a number n is within the bounds of lower and upper. Return false if n is not an integer.
@@ -72,6 +128,17 @@ function generation(x, y){
  * The term "within bounds" means a number is considered equal or greater than a lower bound and lesser (but not equal) to an upper bound, (see example #2).
  * Bounds will be always given as integers.
  */
+
+function intWithinBounds(num1, num2, num3){
+    if(parseInt(num1) !== parseFloat(num1)){
+        return false;
+    }
+    if(num1 >= num2 && num1 < num3){
+        return true;
+    }
+    return false;
+}
+
 
 
 /* Perimeters with a Catch
@@ -95,3 +162,12 @@ function generation(x, y){
  * >> perimeter("c", 4) ➞ 25.12
  * >> perimeter("c", 9) ➞ 56.52
  */
+
+function perimeter(string, num1){
+    if(string === "s"){
+        return 4 * num1;
+    }
+    else if(string === "c"){
+        return 6.28 * num1;
+    }
+}

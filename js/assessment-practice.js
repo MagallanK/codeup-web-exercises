@@ -8,12 +8,13 @@
 // timesFour(null) //false
 
 function timesFour(input) {
-    if (isNaN(input)) {
+    if (isNaN(input) || input === null || input === true) {
         return false;
     }
     if (!isNaN(parseInt(input))) {
         return parseInt(input) * 4;
     }
+    return false;
 }
 
 
@@ -26,7 +27,7 @@ function timesFour(input) {
 // convertDaystoHours(false) //false
 
 function convertDaysToHours(input){
-    if(isNaN(input)){
+    if(isNaN(input) || input === null || typeof input === "boolean"){
         return false;
     }
     var numDays = input;
@@ -35,6 +36,7 @@ function convertDaysToHours(input){
     if(!isNaN(parseInt(input))){
         return  totalHours;
     }
+    // return false;
 }
 
 
@@ -49,15 +51,15 @@ function convertDaysToHours(input){
 // calculateTax()                   // false
 
 function calculateTax(num1, num2){
-    if(isNaN(num1) || isNaN(num2)){
+    if(isNaN(parseFloat(num1)) || isNaN(parseFloat(num2)) || Array.isArray(num1) || Array.isArray(num2)){
         return false;
     }
     var totalPaid = num1;
     var taxPercent = num2 / 100;
     var totalAmount = totalPaid + (taxPercent * totalPaid);
-    totalAmount.toFixed(2);
+    totalAmount = totalAmount.toFixed(2);
+    return "$" + totalAmount;
+    //if(!isNaN(parseFloat(num1)) || !isNaN(parseFloat(num2))){
 
-    if(!isNaN(parseFloat(num1)) || !isNaN(parseFloat(num2))){
-        return "$" + parseFloat(totalAmount);
-    }
+    //}
 }
