@@ -54,10 +54,8 @@ section:nth-of-type(1) {
     /* enter needed declarations here */
     justify-content: space-between;
     align-items: center;
-
-
-
 }
+
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
     /*display: flex;*/
