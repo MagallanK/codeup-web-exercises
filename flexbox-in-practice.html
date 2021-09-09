@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox in Practice</title>
+
+	<style>
+
+	/*#container{*/
+	/*	!*Example settings: for vertical/horizontal alignment*!*/
+	/*	!*height: 100vh;*!*/
+    /*    !*justify-content: center;*!*/
+    /*    !*align-items: center;*!*/
+
+	/*	display: flex;*/
+
+
+	/*	background-color: lawngreen;*/
+	/*	border: 1px solid black;*/
+	/*}*/
+
+	/*.box{*/
+	/*	background-color: rebeccapurple;*/
+	/*	color: antiquewhite;*/
+	/*	padding: 1em;*/
+	/*}*/
+
+	/*!*#box3{*!*/
+	/*!*	margin-left: auto;*!*/
+	/*!*}*!*/
+
+	/*#box1{*/
+	/*	margin-right: auto;*/
+	/*}*/
+
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+    nav {
+        background: #333333;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+		display: flex;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-family: Verdana;
+		display: inline-block;
+		padding: 1em;
+    }
+    nav a:hover {
+        background: black;
+    }
+
+	/*Target last element and move to right side of screen*/
+	nav ul li:nth-child(4){
+		margin-left: auto;
+	}
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</nav>
+
+<!--<div id="container">-->
+
+<!--	<div id="box1" class="box">Flex Item1</div>-->
+<!--	<div id="box2" class="box">Flex Item2</div>-->
+<!--	<div id="box3" class="box">Flex Item3</div>-->
+
+
+<!--</div>-->
+</body>
+</html>
