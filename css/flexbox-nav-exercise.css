@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+a{
+    display: inline-block;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+    padding: 2em .5em;
+}
+
+.nav-link:hover{
+    color: blue;
+}
+
+.items{
+    font-weight: bold;
+    font-size: 10px;
+    list-style: none;
+    padding: 15px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.nav {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li#jobs{
+    flex-grow: 1;
+}
+
+li#logo{
+    flex-grow: 1;
+    font-size: 3em;
+    padding: .2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
