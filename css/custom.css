@@ -1,0 +1,17 @@
+.jumbotron{
+    background-image: url("../img/pizza.png");
+}
+
+h1{
+    text-align: center;
+    background: lightgray;
+    opacity: .6;
+}
+
+
+
+.card-body{
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
