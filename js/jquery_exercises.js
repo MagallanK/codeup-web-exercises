@@ -49,15 +49,18 @@
 
 
 //click event for h1 tag.... Figure out how to make responsive based off user input. Commented out for now for passing results through course.
-$('h1').click(function () {
-    confirm('By clicking this title, the background color will now change. Do you want to continue?');
-    // if (confirm === true) {
+$('h1').click(function (input) {
+
+    // with no parameter in function use var userInput = confirm() for the ifs pass the var
+
+     input = confirm('By clicking this title, the background color will now change. Do you want to continue?');
+    if (input === true) {
         $(this).css('background-color', 'red').css('font-family', 'helvetica');
-    // }
-    // if (confirm === false) {
-    //     alert('You chose not to change the background at this time.');
-    //     $(this).css('background-color', 'none').css('font-family', 'none');
-    // }
+    }
+    if (input === false) {
+        alert('You chose not to change the background at this time.');
+        $(this).css('background-color', 'white').css('font-family', 'inherit');
+    }
 });
 
 
@@ -65,6 +68,11 @@ $('h1').click(function () {
 $('p').dblclick(function () {
     $(this).css('font-size', '18px').css('font-family', 'cursive').css('background-color', 'yellow');
 });
+
+// click to change the p tags to original
+$('p').click(function(){
+    $(this).css('background-color', 'white').css('font-family', 'inherit').css('font-size', 'inherit');
+})
 
 
 //hover event for li tags
