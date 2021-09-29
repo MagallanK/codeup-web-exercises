@@ -53,7 +53,7 @@ $('h1').click(function (input) {
 
     // with no parameter in function use var userInput = confirm() for the ifs pass the var
 
-     input = confirm('By clicking this title, the background color will now change. Do you want to continue?');
+    input = confirm('By clicking this title, the background color will now change. Do you want to continue?');
     if (input === true) {
         $(this).css('background-color', 'red').css('font-family', 'helvetica');
     }
@@ -70,9 +70,9 @@ $('p').dblclick(function () {
 });
 
 // click to change the p tags to original
-$('p').click(function(){
+$('p').click(function () {
     $(this).css('background-color', 'white').css('font-family', 'inherit').css('font-size', 'inherit');
-})
+});
 
 
 //hover event for li tags
