@@ -94,3 +94,32 @@ $('h3').hover(
         $(this).text('NOTICE: Hover over this text.').css('background-color', 'inherit');
     }
 );
+
+
+//-----------------------Keyboard Events Lecture examples--------------------\\
+//keydown
+// $('body').keydown(function(event){
+//     console.log(event.key);
+// });
+
+
+//keypress
+// $('body').keypress(function(event){
+//     console.log(event.key);
+// });
+
+
+//keyup
+// $('body').keyup(function(event){
+//     console.log("The key you pressed was: " + event.key);
+//     //add global var
+//     myKeys += event.key;
+//     console.log(myKeys);
+//     // if my user types '' > do a cool thing
+//     if(myKeys === "ArrowUp"){
+//         alert("cooooool thing 8");
+//     }
+// });
+//
+// //global var
+// var myKeys = "";
