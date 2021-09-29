@@ -51,7 +51,7 @@
 //click event for h1 tag.... Figure out how to make responsive based off user input. Commented out for now for passing results through course.
 $('h1').click(function (input) {
 
-    // with no parameter in function use var userInput = confirm() for the ifs pass the var
+    // with no parameter in function use var userInput = confirm(), for the ifs pass the var
 
     input = confirm('By clicking this title, the background color will now change. Do you want to continue?');
     if (input === true) {
@@ -78,10 +78,10 @@ $('p').click(function () {
 //hover event for li tags
 $('li').hover(
     function () {
-        $(this).css('background-color', 'green').css('font-size', '22px');
+        $(this).css('color', 'green').css('font-size', '22px');
     },
     function () {
-        $(this).css('background-color', 'inherit').css('font-size', 'inherit');
+        $(this).css('color', 'inherit').css('font-size', 'inherit');
     }
 );
 
