@@ -1,0 +1,11 @@
+.invisible{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.highlight{
+    background-color: royalblue;
+}
