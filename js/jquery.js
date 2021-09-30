@@ -18,7 +18,7 @@ $('body').keyup(function (event) {
         alert('You figured out the secret code congrats!! Enjoy a little tune and a shocked Goku image');
         //#4 option A.-- Display an image
         $(this).css('background-color', 'green');
-        $(this).css('background-image', "url('/img/goku.jpeg')");
+        $(this).css('background-image', "url('/img/dragon-ball-z-goku.gif')");
         $(this).css('background-size', 'contain');
         //#4 option B.-- Play a sound
         $('#pop')[0].play();
