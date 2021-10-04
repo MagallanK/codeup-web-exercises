@@ -3,6 +3,11 @@
 <head>
 	<title>Online Store</title>
 </head>
+<style>
+	body{
+		background-color: dimgray;
+	}
+</style>
 <body>
 
 <h1>My Tool Store</h1>
@@ -18,6 +23,8 @@
 	</thead>
 	<tbody id="insertProducts"></tbody>
 </table>
+<br>
+<button type="button" class="refresh">Click to refresh</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -31,17 +38,23 @@
 // HINT: You will want to target #insertProducts for your new HTML elements
 
 
-        $.get('/data/inventory.json').done(function (data, status, jqXhr) {
-            console.log(data);
-        })
-        item.forEach(function (item) {
-            var html = ('<th>' + item.title + '</th>'
-                + '<th>' + item.quantity + '</th>'
-                + '<th>' + item.categories + '</th>'
-                + '<th>' + item.price + '</th>')
-
-	        $('#insertProducts').html(html);
-        })
+        $(document).ready(function () {
+            $.get("data/inventory.json", function (data) {
+                var html = "";
+                $.each(data, function (index) {
+                    html += "<tr>";
+                    html += "<td>" + data[index].title + "</td>";
+                    html += "<td>" + data[index].quantity + "</td>";
+                    html += "<td>" + data[index].price + "</td>";
+                    html += "<td>" + data[index].categories + "</td>";
+                    html += "</tr>";
+                });
+                $('#insertProducts').append(html);
+            });
+            $('.refresh').click(function(){
+                location.reload();
+            });
+        });
     })();
 </script>
 
