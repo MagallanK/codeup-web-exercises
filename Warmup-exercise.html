@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Warmup</title>
+</head>
+
+<body>
+
+<h1>Monday Blues</h1>
+
+<p>This is a paragraph about Monday blues.</p>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+	"use strict";
+
+	$('p').click(function(){
+	    alert('This is a paragraph about Monday blues.');
+	    // alert($(this).text());
+		// use this instead of the copy paste I did. originally thought .text() was to only change the text not able to repeat as above.
+	});
+
+</script>
+</body>
+</html>
