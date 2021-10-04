@@ -7,5 +7,17 @@
 }
 
 .highlight{
-    background-color: royalblue;
+    background-color: skyblue;
+}
+
+.list-highlight{
+    background-color: yellow;
+}
+
+.title-text{
+    font-weight: bold;
+}
+
+.text-color{
+    color: deepskyblue;
 }
