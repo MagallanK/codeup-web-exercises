@@ -48,6 +48,36 @@
 // HINT: You will want to target #insertProducts for your new HTML elements
 
 
+	    //Another format to work with for same results in webpage. This is the review format
+	    // function renderTool(tool){
+	    //     var html = '';
+	    //     html += '<tr>';
+	    //     html += '<td>' + tool.title + '</td>';
+        //     html += '<td>' + tool.quantity + '</td>';
+        //     html += '<td>' + tool.price + '</td>';
+        //     html += '<td>' + tool.categories + '</td>';
+        //     html += '</tr>';
+	    //
+        //     return html;
+	    // }
+	    // $.ajax('data/inventory.json', {
+	    //     type: 'GET'
+        // }).done(function(data){
+        //     console.log(data);
+	    //
+        //     data.forEach(function(tool){
+        //         var toolHtml = renderTool(tool);
+        //         console.log(toolHtml);
+        //         $('#insertProducts').append(toolHtml);
+        //     });
+	    // });
+	    //
+	    // $('.refresh').click(function(){
+	    //     window.location.reload();
+	    // });
+
+
+	    //Format before review
         $(document).ready(function () {
             $.get("data/inventory.json", function (data) {
                 var html = "";

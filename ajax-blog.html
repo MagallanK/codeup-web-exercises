@@ -30,10 +30,10 @@
                 var html = "";
                 $.each(data, function (index) {
 
-                    //for styling adding elements add class or use css to apply styles. Not Boostrap
+                    //for styling elements add class or use css to apply styles. Not Boostrap
                     html += "<h3 class='font-italic text-center'>" + data[index].title + "</h3>";
-                    html += "<p class=''>" + data[index].content + "</p>";
-                    html += "<p>" + data[index].categories + "</p>";
+                    html += "<p class='font-bold text-center'>" + data[index].content + "</p>";
+                    html += "<p class='font-bold text-center'>" + data[index].categories + "</p>";
                     html += "<h5 class='text-center'>" + data[index].date + "</h5>";
                 });
 
