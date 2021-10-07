@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
     dragRotate: false,
 });
 
-// open weather map layout for 5 days forecast
+// open weather map layout for one call forecast
 $.get("https://api.openweathermap.org/data/2.5/onecall", {
     APPID: mapboxWeatherKey,
     lat: 29.4252,
