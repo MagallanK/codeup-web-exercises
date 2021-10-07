@@ -4,11 +4,14 @@ html body{
     background-color: grey;
 }
 
-#map{
-    width: 800px;
-    height: 475px;
+h1{
+    font-family: Helvetica, serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
-
-
-
+#map{
+    width: auto;
+    height: 500px;
+    margin: auto;
+}

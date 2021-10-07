@@ -6,17 +6,30 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-streets-v11',
     zoom: 9,
-    center: [-98.4916, 29.4252],
+    center: [-98.4936, 29.4241],
     dragRotate: true,
 });
 
-// open weather map layout for one call forecast
-$.get("https://api.openweathermap.org/data/2.5/onecall", {
+// open weather map layout for 5 day forecast
+$.get("https://api.openweathermap.org/data/2.5/forecast", {
     APPID: mapboxWeatherKey,
-    lat: 29.4252,
-    lon: -98.4916,
+    q: 'San Antonio, US',
     units: 'imperial',
-    exclude: 'minutely, hourly, alerts'
 }).done(function(data) {
     console.log(data);
 });
+
+
+var daysOfTheWeek =['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+
+daysOfTheWeek.forEach(function(input){
+    geocode(daysOfTheWeek, mapboxApiKey).then(function (results) {
+        var popup = new mapboxgl.Popup()
+
+        new mapboxgl.Marker({color: 'green'})
+            .setLngLat(results.coordinate)
+            .setPopup(popup)
+            .addTo(map)
+    });
+});
+
