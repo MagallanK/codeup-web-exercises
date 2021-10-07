@@ -18,7 +18,7 @@
 <h1>Daily forecast</h1>
 
 <!--Boostrap Navbar dark to navigate with map implementation later. Currently, has breakpoints want to keep for mobile version of site later. Might have to adjust-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
 	<!--Make Navbar 1st position not link w/ custom text-->
 	<!--	<a class="navbar-brand" href="#">Navbar</a>-->
 	<span class="navbar-brand">Weather for you!</span>
@@ -33,35 +33,93 @@
 				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">link</a>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-				   aria-haspopup="true" aria-expanded="false">
-					Recent
-				</a>
-
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">Something else here</a>
-				</div>
+				<a class="nav-link" href="https://github.com/MagallanK" target="_blank">My github</a>
 			</li>
 		</ul>
-		<!--Search bar. Find way to make connect to map functionality-->
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
 	</div>
+	<!--Search bar. Find way to make connect to map functionality-->
+	<form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="search" placeholder="Enter City, State" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	</form>
 </nav>
 <!--Space between navbar and map later-->
 <br>
+<!--Added map to page with spacing I like-->
+<div class="container-fluid">
+	<div id="map" class="container-fluid"></div>
+	<br>
+	<!--Added space below map to create collapse labels, want to display weather info on these tabs-->
+	<nav>
+		<div>
 
-<div id="map"></div>
+<!--Monday button-->
+			<button class="btn btn-primary tuesday" type="button" data-toggle="collapse" data-target="#collapseMonday"
+			        aria-expanded="false" aria-controls="collapseExample">
+				Monday Weather
+			</button>
 
+<!--Tuesday button-->
+			<button class="btn btn-primary tuesday" type="button" data-toggle="collapse" data-target="#collapseTuesday"
+			        aria-expanded="false" aria-controls="collapseExample">
+				Tuesday Weather
+			</button>
 
+<!--Wednesday Button-->
+			<button class="btn btn-primary tuesday" type="button" data-toggle="collapse" data-target="#collapseWednesday"
+			        aria-expanded="false" aria-controls="collapseExample">
+				Wednesday Weather
+			</button>
+
+<!--Thursday Button-->
+			<button class="btn btn-primary thursday" type="button" data-toggle="collapse" data-target="#collapseThursday"
+			        aria-expanded="false" aria-controls="collapseExample">
+				Thursday Weather
+			</button>
+
+<!--Friday Button-->
+			<button class="btn btn-primary tuesday" type="button" data-toggle="collapse" data-target="#collapseFriday"
+			        aria-expanded="false" aria-controls="collapseExample">
+				Friday Weather
+			</button>
+		</div>
+
+<!--Monday weather info-->
+		<div class="collapse" id="collapseMonday">
+			<div class="card card-body bg-dark">
+				Monday Weather information
+			</div>
+		</div>
+
+<!--Tuesday weather info-->
+		<div class="collapse" id="collapseTuesday">
+			<div class="card card-body bg-dark">
+				Tuesday Weather information
+			</div>
+		</div>
+
+<!--Wednesday weather info-->
+		<div class="collapse" id="collapseWednesday">
+		<div class="card card-body bg-dark">
+			Wednesday Weather information
+		</div>
+	</div>
+
+<!--Thursday weather info-->
+		<div class="collapse" id="collapseThursday">
+		<div class="card card-body bg-dark">
+			Thursday Weather information
+		</div>
+	</div>
+
+<!--Friday weather info-->
+		<div class="collapse" id="collapseFriday">
+			<div class="card card-body bg-dark">
+				Friday Weather information
+			</div>
+		</div>
+	</nav>
+</div>
 
 
 <!--jQuery and Bootstrap Bundle-->

@@ -5,9 +5,9 @@ mapboxgl.accessToken = mapboxApiKey;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    zoom: 10,
+    zoom: 9,
     center: [-98.4916, 29.4252],
-    dragRotate: false,
+    dragRotate: true,
 });
 
 // open weather map layout for one call forecast
