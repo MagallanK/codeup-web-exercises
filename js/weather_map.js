@@ -20,16 +20,22 @@ $.get("https://api.openweathermap.org/data/2.5/forecast", {
 });
 
 
-var daysOfTheWeek =['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-
-daysOfTheWeek.forEach(function(input){
-    geocode(daysOfTheWeek, mapboxApiKey).then(function (results) {
-        var popup = new mapboxgl.Popup()
-
-        new mapboxgl.Marker({color: 'green'})
-            .setLngLat(results.coordinate)
-            .setPopup(popup)
-            .addTo(map)
-    });
+//Work on getting one weather date to display.
+$("#userSearch").click(function (e) {
+    e.preventDefault();
+    let query = $("#searchValue").val(); // a string that was input
+    console.log(query);
 });
 
+
+
+//Array of days of the week, want to loop through the array and append each to the html buttons for weather info
+// var daysOfTheWeek =['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+//
+// daysOfTheWeek.forEach(function(input){
+
+
+// function for converting the date to standard notation
+// function parseDate(timestamp) {
+//     return new Date(timestamp * 1000).toLocaleDateString();
+// }
