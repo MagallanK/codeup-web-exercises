@@ -2,7 +2,7 @@
 
 
 
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+$.get("http://api.openweathermap.org/data/2.5/forecast", {
     APPID: mapboxWeatherKey,
     q:     "San Antonio, US",
     units: 'imperial',
