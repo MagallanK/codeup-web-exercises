@@ -11,29 +11,26 @@ var map = new mapboxgl.Map({
 });
 
 // open weather map layout for 5 day forecast
-$.get("https://api.openweathermap.org/data/2.5/forecast", {
+$.get("https://api.openweathermap.org/data/2.5/onecall", {
     APPID: mapboxWeatherKey,
-    q: 'San Antonio, US',
+    lat: 29.4241,
+    lon: -98.4936,
     units: 'imperial',
+    exclude: 'hourly, minutely, alerts',
 }).done(function(data) {
     console.log(data);
 });
 
 
 //Work on getting one weather date to display.
-$("#userSearch").click(function (e) {
-    e.preventDefault();
-    let query = $("#searchValue").val(); // a string that was input
-    console.log(query);
-});
-
-
-
 //Array of days of the week, want to loop through the array and append each to the html buttons for weather info
-// var daysOfTheWeek =['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-//
-// daysOfTheWeek.forEach(function(input){
+var daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+$(".monday").click(function(e){
+    e.preventDefault();
+    $.get("https://api.openweathermap.org/data/2.5/onecall").done(function(data, status){
 
+    })
+})
 
 // function for converting the date to standard notation
 // function parseDate(timestamp) {
