@@ -5,10 +5,29 @@ mapboxgl.accessToken = mapboxApiKey;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    zoom: 9,
+    zoom: 10,
     center: [-98.4936, 29.4241],
     dragRotate: true,
 });
+
+//Create marker on map
+var marker = new mapboxgl.Marker({color: 'blue'})
+    .setLngLat([-98.4936, 29.4241])
+    .addTo(map);
+
+//Onclick event to get location on map of user click (console.log)
+map.on('click', function(e){
+    e.preventDefault();
+    console.log(e)
+});
+
+//Take user click from above and place marker on map
+
+    var userMarker = new mapboxgl.Marker({color: 'green'})
+        // .setLnglat(["latitude", "longitude"])
+        // .addToMap(map);
+
+
 
 //Function to display layout of cards when showing weather and info
 function renderWeather(weather) {
@@ -49,5 +68,3 @@ function convertDateTime(time) {
     var date = new Date(time * 1000);
     return date.toLocaleDateString("en-US");
 }
-
-//Create function to display markers and update weather at that location after clicks on map
