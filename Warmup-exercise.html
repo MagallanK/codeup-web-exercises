@@ -24,6 +24,27 @@
 		// use this instead of the copy paste I did. originally thought .text() was to only change the text not able to repeat as above.
 	});
 
+	//Write a function named convertDateTime- convertDateTime will take in a single num parameter along the lines of the property "dt:" [1618317040].
+	//convertDateTime will return a form with human readable meaning - a date with a distinct month / year and perhaps other information.
+
+	var dtTest = 1618317040;
+
+	function convertDateTime(time){
+
+	    var date = new Date(time * 1000);
+        return date.toLocaleDateString("en-US"); // my solution difference does not pass in milliseconds to Date(constructor) like below.
+	}
+	// Kenneths review of this function
+	// var thisMorning = 1633702800;
+	// function convertDateTime(dtNum){
+	//
+	//     var dtInMs = dtNum * 1000; // seconds * 1000 = our milliseconds
+	//
+	// 	var dateObject = new Date(dtInMs); // pass in milliseconds to Date(constructor)
+	//
+	// 	return dateObject.toLocaleString();
+	// }
+
 </script>
 </body>
 </html>
