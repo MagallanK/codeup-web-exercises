@@ -1,6 +1,6 @@
 "use strict";
 
-// added map to get display on website of map
+// added map to get display on site
 mapboxgl.accessToken = mapboxApiKey;
 var map = new mapboxgl.Map({
     container: 'map',
@@ -10,70 +10,44 @@ var map = new mapboxgl.Map({
     dragRotate: true,
 });
 
-// open weather map layout for 5 day forecast
+//Function to display layout of cards when showing weather and info
+function renderWeather(weather) {
+    var html = "";
+    html += "<div>";
+    html += "<p>" + convertDateTime(weather.dt) + "</p>";
+    html += "<img src='" + "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png" + "'>"
+    html += "<p> humidity: " + weather.humidity + "</p>";
+    html += "<p> pressure: " + weather.pressure + "</p>";
+    html += "<p> temp: " + weather.temp.day + "</p>";
+    html += "<p> weather: " + weather.weather[0].main + "</p>";
+    html += "</div>";
 
-var dailyData = [];
+    return html;
+}
 
+// open weather map layout for 5 day forecast including loop and appending to html
+var eightDayWeather
 $.get("https://api.openweathermap.org/data/2.5/onecall", {
     APPID: mapboxWeatherKey,
     lat: 29.4241,
     lon: -98.4936,
     units: 'imperial',
     exclude: 'hourly, minutely, alerts',
-}).done(function(data) {
+}).done(function (data) {
     console.log(data);
-    dailyData = data.daily;
+    eightDayWeather = data.daily;
+//loop through amount of days want displayed with weather
+    for (var i = 0; i <= 4; i++) {
+        var html = renderWeather(eightDayWeather[i]);
+        $(".weatherInfo").eq(i).append(html);
+    }
 });
 
+// function for converting the date to readable format
+function convertDateTime(time) {
 
-//Work on getting one weather date to display.
-//Array of days of the week, want to loop through the array and append each to the html buttons for weather info
-// var daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    var date = new Date(time * 1000);
+    return date.toLocaleDateString("en-US");
+}
 
-// console.log one weather report when clicking button for monday
-$("button[data-target='#collapseMonday']").click(function(e){
-    e.preventDefault();
-    console.log(dailyData[1]); // can declare index here for specific days of the week [#]
-})
-
-//Need to append to html to display weather in the Monday div container after clicking button.
-
-$(document).ready(function(){
-    $.get("https://api.openweathermap.org/data/2.5/onecall", function(data){
-        var html = "";
-        $.each(data, function(index){
-            html += "<div>";
-            html += "<p>" + data[index].day + "</p>";
-            html += "</div>";
-        });
-        $("#collapseMonday").append(html);
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function for converting the date to standard notation
-// function parseDate(timestamp) {
-//     return new Date(timestamp * 1000).toLocaleDateString();
-// }
-// function convertDateTime(time){
-//
-//     var date = new Date(time * 1000);
-//     console.log(date.toLocaleDateString("en-US"));
-// }
+//Create function to display markers and update weather at that location after clicks on map
