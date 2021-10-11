@@ -23,10 +23,15 @@ map.on('click', function(e){
 
 //Take user click from above and place marker on map
 
-    var userMarker = new mapboxgl.Marker({color: 'green'})
-        // .setLnglat(["latitude", "longitude"])
-        // .addToMap(map);
-
+// function userSearch(info, token, map){
+//     geocode(info.address, token).then(function(coordinates){
+//         var userMarker = new mapboxgl.Marker({color: 'green'})
+//             .setLngLat(coordinates)
+//             .addTo(map);
+//     });
+// }
+//
+// userSearch(userMarker, accessToken, map);
 
 
 //Function to display layout of cards when showing weather and info
