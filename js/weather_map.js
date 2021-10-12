@@ -16,7 +16,7 @@ var marker = new mapboxgl.Marker({color: 'blue'})
     .addTo(map);
 
 //Onclick event to get location on map of user click (console.log)
-map.on('click', function(e){
+map.on('click', function (e) {
     e.preventDefault();
     console.log(e)
 });
@@ -34,10 +34,10 @@ map.on('click', function(e){
 // userSearch(marker, accessToken, map);
 
 
-function searchInput(e){
+function searchInput(e) {
     e.preventDefault();
     var search = $("#userSearch").val()
-    geocode(search, mapboxApiKey).then(function(coordinates){
+    geocode(search, mapboxApiKey).then(function (coordinates) {
         marker.setLngLat(coordinates);
         map.flyTo({
             center: coordinates,
@@ -68,6 +68,7 @@ function searchInput(e){
         });
     });
 }
+
 //call the function for the search bar and use .click to allow the button to work as intended.
 $('#searchValue').click(searchInput)
 
