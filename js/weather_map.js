@@ -31,8 +31,45 @@ map.on('click', function(e){
 //     });
 // }
 //
-// userSearch(userMarker, accessToken, map);
+// userSearch(marker, accessToken, map);
 
+
+function searchInput(e){
+    e.preventDefault();
+    var search = $("#userSearch").val()
+    geocode(search, mapboxApiKey).then(function(coordinates){
+        marker.setLngLat(coordinates);
+        map.flyTo({
+            center: coordinates,
+            zoom: 11,
+            speed: .25,
+            curve: 1
+        })
+        console.log(coordinates)
+        $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            APPID: mapboxWeatherKey,
+            lat: coordinates[1],
+            lon: coordinates[0],
+            units: 'imperial',
+            exclude: 'hourly, minutely, alerts',
+        }).done(function (data) {
+            console.log(data);
+            eightDayWeather = data.daily;
+
+            // Clear the html so the weather does not stack after hitting submit button when searching.
+            $(".weatherInfo").html('')
+
+            //loop through amount of days want displayed with weather
+            for (var i = 0; i <= 4; i++) {
+                var html = renderWeather(eightDayWeather[i]);
+
+                $(".weatherInfo").eq(i).append(html);
+            }
+        });
+    });
+}
+//call the function for the search bar and use .click to allow the button to work as intended.
+$('#searchValue').click(searchInput)
 
 //Function to display layout of cards when showing weather and info
 function renderWeather(weather) {
