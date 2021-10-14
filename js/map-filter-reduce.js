@@ -107,6 +107,12 @@ let listNames = users.reduce((name, user) => {
     return name = [...name, user.name];
 }, []).join(', ');
 
+
+// Another way to solve this problem without having to use .reduce()
+// let listNames = users.map(function(user){
+// return user.name;
+// }).join(", ");
+
 console.log("Exercise # 6: ");
 console.log("List of all usernames in a string: ");
 console.log(listNames);
